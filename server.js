@@ -18,7 +18,7 @@ app.use(methodOverride("_method"))
 
 // INDEX
 app.get('/budgets',(req,res) => {
-
+    res.render("index.ejs",{budget: budget,title: "INDEX - Budgtr"})
 })
 
 // NEW
