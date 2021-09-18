@@ -6,6 +6,13 @@
 <body>
     <h1>BUDGTR - Index</h1>
     <table>
+        <tr>
+            <th>DATE</th>
+            <th>NAME</th>
+            <th>FROM</th>
+            <th>AMOUNT</th>
+            <th>TAGS</th>
+        </tr>
         <% for (let i = 0; i < budget.length; i++) { %>
         <tr>
             <td><%= budget[i].date %></td>
