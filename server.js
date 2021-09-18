@@ -24,12 +24,13 @@ app.get('/budgets',(req,res) => {
 
 // NEW
 app.get('/budgets/new',(req,res) => {
-    res.render('new.ejs',{budget: budget, title: "NEW - Budgtr"})
+    res.render('new.ejs',{title: "NEW - Budgtr"})
 })
 
 // CREATE
-app.post('budgets',(req,res) => {
-
+app.post('/budgets',(req,res) => {
+    budget.push(req.body)
+    res.redirect('/budgets')
 })
 
 // SHOW
