@@ -33,7 +33,7 @@ app.post('budgets',(req,res) => {
 
 // SHOW
 app.get('/budgets/:id',(req,res) => {
-
+    res.render('show.ejs',{budgetItem: budget[req.params.id], title: `${budget[req.params.id].name.toUpperCase()} - Budgtr`})
 })
 ////////////////////////////////////////////////////////////////
 // LISTENER
