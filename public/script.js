@@ -1,12 +1,4 @@
-const bankAccount = document.getElementById("bank-account")
-
-let balance = 1000
-
-const displayBankAccount = () => {
-    bankAccount.html(`Balance: ${balance}`)
-}
-
-displayBankAccount()
+// trying this all in a script.ejs partial instead
 
 ////////////////////////////////////////
 // NOTES/SOURCES:
@@ -18,6 +10,16 @@ displayBankAccount()
 ////////////////////////////////////////
 // CODE GRAVEYARD
 ////////////////////////////////////////
+
+// const bankAccount = document.getElementById("bank-account")
+
+// let balance = 1000
+
+// const displayBankAccount = () => {
+//     bankAccount.innerHTML = "doubletest"
+// }
+
+// displayBankAccount()
 
 // Trying this without jQuery:
 // const $bankAccount = $('#bank-account')

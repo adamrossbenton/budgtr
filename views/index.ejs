@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%-include("./partials/head")%> 
+    <%-include("./partials/head")%>
+    <!-- <%- include("./partials/script") %>   -->
+    <script>
+        console.log("Hello world")
+    </script>
 </head>
 <body>
     <h1>BUDGTR - Index</h1>
-    <h4>Balance: <span id="bank-account"></span></h4>
+    <h4>Balance:
+        <% let agg = 0%>
+        <% for (item of budget) { %>
+            <% agg += item.amount %>  
+        <% } %>
+        <% agg %>  
+    </h4>
     <table>
         <tr>
             <th>DATE</th>
@@ -27,8 +37,5 @@
     <form action="/budgets/new">
         <input type="submit" value="NEW BUDGET ITEM">
     </form>
-    <script>
-        let bankAccount = 1000
-    </script>
 </body>
 </html>
