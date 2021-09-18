@@ -1,10 +1,16 @@
 const express = require("express")
 const app = express()
+const methodOverride = require("method-override")
+const budget = require("./models/budget")
 const port = 3000
 
 ////////////////////////////////////////////////////////////////
 // MIDWARE
 ////////////////////////////////////////////////////////////////
+
+app.use(express.urlencoded({extended:false}))
+app.use(express.static("public"))
+app.use(methodOverride("_method"))
 
 ////////////////////////////////////////////////////////////////
 // ROUTES
@@ -22,7 +28,7 @@ app.get('/budgets/new',(req,res) => {
 
 // CREATE
 app.post('budgets',(req,res) => {
-    
+
 })
 
 // SHOW
