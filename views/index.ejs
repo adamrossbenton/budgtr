@@ -2,19 +2,15 @@
 <html lang="en">
 <head>
     <%-include("./partials/head")%>
-    <!-- <%- include("./partials/script") %>   -->
-    <script>
-        console.log("Hello world")
-    </script>
 </head>
 <body>
     <h1>BUDGTR - Index</h1>
-    <h4>Balance:
-        <% let agg = 0%>
+    <h4 id="balance">Balance:
+        <% let balance = 0%>
         <% for (item of budget) { %>
-            <% agg += item.amount %>  
+            <% balance += item.amount %>  
         <% } %>
-        <%= agg %>  
+        <%= balance %>  
     </h4>
     <table>
         <tr>

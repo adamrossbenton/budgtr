@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const methodOverride = require("method-override")
 const bodyParser = require("body-parser")
+// probably don't need to require jQuery, not using it
 const jQuery = require("jquery")
 const budget = require("./models/budget")
 const port = 3000
