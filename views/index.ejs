@@ -8,7 +8,7 @@
     <h4 id="balance">Balance:
         <% let balance = 0%>
         <% for (item of budget) { %>
-            <% balance += item.amount %>  
+            <% balance += parseInt(item.amount) %>  
         <% } %>
         <%= balance %>  
     </h4>
