@@ -10,7 +10,13 @@
         <% for (item of budget) { %>
             <% balance += parseInt(item.amount) %>  
         <% } %>
-        <%= balance %>  
+        <% if (balance > 1000) { %> 
+            <span style="color: chartreuse"><%= balance %></span>
+        <% } else if (balance < 0) { %>
+            <span style="color:crimson"><%= balance %></spa>
+        <% } else { %>
+            <span><%= balance %></span>   
+        <% } %>   
     </h4>
     <table>
         <tr>
